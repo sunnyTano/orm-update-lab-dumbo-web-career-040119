@@ -79,6 +79,17 @@ end
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
     
+  def self.find_by_name(name)
+    # find the student in the database given a name
+    sql = <<-SQL
+    SELECT * 
+    FROM students 
+    WHERE name = ?
+      SQL
     
+    DB[:conn].execute(sql, name).map do |row|
+      self.new_from_db(row)
+    end.first
+  end     
     
 end
