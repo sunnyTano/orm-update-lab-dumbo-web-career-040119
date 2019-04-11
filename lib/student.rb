@@ -61,6 +61,7 @@ end
     new_stud.name = row[1]
     new_stud.grade = row[2]
     new_stud = self.new(id, name, grade)
+    new_stud
   end
     
   def update
