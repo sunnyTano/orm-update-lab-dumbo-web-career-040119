@@ -48,6 +48,8 @@ end
     student = Student.new(name, grade)
     student.save
     student
+    
+    DB[:conn].execute(student)
   end
   
   def self.new_from_db(row)
