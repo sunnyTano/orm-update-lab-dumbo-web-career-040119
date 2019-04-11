@@ -62,6 +62,8 @@ end
     new_stud
   end
     
+  def update
+    
     
     
 end
