@@ -34,6 +34,7 @@ end
 end
 
   def save
+    if updated
     sql = <<-SQL
     INSERT INTO 
     students (name, grade)
